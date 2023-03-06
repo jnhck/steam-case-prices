@@ -1,8 +1,10 @@
-export type Case = {
-    id: string;
+export type CaseBasics = {
     name: string;
     img: string;
-    quantity_owned: number;
-    price_average_bought: number;
 }
 
+export type Case = CaseBasics & {
+    price_gross: number;
+    volume: number;
+    timestamp: number;
+}
